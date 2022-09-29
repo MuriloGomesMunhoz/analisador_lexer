@@ -14,7 +14,7 @@ public class COMENTARIO implements AFD {
         for(pos = pos; pos < texto.length();pos++){
 
             aux+=texto.charAt(pos);
-            if(texto.charAt(pos) == '!' || texto.charAt(pos) == ' ' ){
+            if(texto.charAt(pos) == ' ' ){
                 aux = aux.substring(0, aux.length()-1);
                 fim = aux.length();
                 if(texto.charAt(ini) == ' '){

@@ -6,7 +6,7 @@ public class RESERVADA_INT implements AFD {
 
         for(pos = pos; pos < texto.length();pos++){
             aux+=texto.charAt(pos);
-            if(texto.charAt(pos) == '!' || texto.charAt(pos) == ' ' ){
+            if(texto.charAt(pos) == ' ' ){
                 aux = aux.substring(0, aux.length()-1);
                 if (aux.equals("int")) {
                      return new Token("RESERVADA_INT", "int", aux.length());

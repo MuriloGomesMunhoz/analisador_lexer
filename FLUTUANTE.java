@@ -14,7 +14,7 @@ public class FLUTUANTE implements AFD {
                 aux+=texto.charAt(pos);
             }
 
-            if((texto.charAt(pos) == '!' || texto.charAt(pos) == ' ') && validaPonto == 1){
+            if(texto.charAt(pos) == ' ' && validaPonto == 1){
                 return new Token("FLUTUANTE", aux, aux.length());
             }
 

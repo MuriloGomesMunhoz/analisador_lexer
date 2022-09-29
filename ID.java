@@ -7,15 +7,13 @@ public class ID implements AFD {
         String aux = "";
 
         for(pos = pos; pos < texto.length();pos++){
-            if(texto.charAt(pos) == '!' || texto.charAt(pos) == ' ' ){
+            if(texto.charAt(pos) == ' ' || texto.charAt(pos) == ')' || texto.charAt(pos) == '('){
                 return new Token("ID", aux, aux.length());
-
             }
-            else if(isLetter(texto.charAt(pos))){
+            else if(!isDigit(texto.charAt(pos))){
                 aux+=texto.charAt(pos);
             }else{
                 return null;
-
             }
         }
         return null;

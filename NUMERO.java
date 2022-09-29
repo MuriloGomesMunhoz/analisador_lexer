@@ -11,7 +11,7 @@ public class NUMERO implements AFD {
             }else{
                 return null;
             }
-            if((texto.charAt(pos) == '!' || texto.charAt(pos) == ' ')){
+            if(texto.charAt(pos) == ' '){
                 aux = aux.substring(0, aux.length()-1);
                     return new Token("NUMERO", aux, (aux.length()));
 

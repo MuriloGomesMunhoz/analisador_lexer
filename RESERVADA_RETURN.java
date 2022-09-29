@@ -8,7 +8,7 @@ public class RESERVADA_RETURN implements AFD {
 
             aux+=texto.charAt(pos);
 
-            if(texto.charAt(pos) == '!' || texto.charAt(pos) == ' ' ){
+            if(texto.charAt(pos) == ' '){
                 aux = aux.substring(0, aux.length()-1);
                 if (aux.equals("return")) {
 

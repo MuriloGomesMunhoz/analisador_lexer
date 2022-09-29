@@ -19,7 +19,7 @@ public class Lexer{
   }
 
   public void error(){
-    throw new RuntimeException("invalid character");
+    throw new RuntimeException("INVALID CARACTER");
   }
 
   public void advance(int qtde){
@@ -32,7 +32,7 @@ public class Lexer{
   }
 
   public void skip_whitespace(){
-    while (current_char != '!' && current_char == ' '){
+    while (current_char != '!' && current_char == ' ' ){
       advance(1);
     }
   }
@@ -61,19 +61,19 @@ public class Lexer{
       afds.add(new NUMERO());
       afds.add(new ID());
       afds.add(new FLUTUANTE());
+      afds.add(new ERROR());
+
 
 
       for (AFD afd : afds) {
-
         Token reconhecido = afd.processa(pos, texto);
-
         if (reconhecido != null) {
           advance(reconhecido.getLength());
           return reconhecido;
         }
       }
 
-      error();
+      //error();
     }
     return new Token("EOF", "!", 1);
   }
